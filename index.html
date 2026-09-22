@@ -4,17 +4,11 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kodchaporn | QA Tester CV</title>
-
+<title>Kodchaporn Mahaprom | QA Tester CV</title>
 
 <style>
-
-/* =========================
-   BASIC
-========================= */
 
 * {
     box-sizing: border-box;
@@ -25,72 +19,40 @@
 
 :root {
     --black: #21151f;
-    --darkpink: #672640;
-    --wine: #91375d;
-    --pink: #db5489;
-    --pink2: #f39abb;
-    --lightpink: #ffd8e8;
-    --purple: #a374b6;
+    --wine: #71304f;
+    --pink: #dc548a;
+    --pink-light: #ffd5e6;
+    --purple: #a177b5;
     --white: #fffafd;
-    --text: #372b34;
+    --text: #382d35;
 }
 
 body {
-
     font-family: Arial, Helvetica, sans-serif;
-
     color: var(--text);
-
     line-height: 1.65;
-
     min-height: 100vh;
-
     overflow-x: hidden;
 
     background:
-
-        radial-gradient(
-            circle at 10% 10%,
-            #ffd6e7 0%,
-            transparent 25%
-        ),
-
-        radial-gradient(
-            circle at 90% 30%,
-            #e8daf3 0%,
-            transparent 25%
-        ),
-
-        linear-gradient(
-            135deg,
-            #fff8fb,
-            #f8eef4,
-            #f3edf8
-        );
+        radial-gradient(circle at 10% 10%, #ffd5e7 0%, transparent 25%),
+        radial-gradient(circle at 90% 25%, #e9d9f5 0%, transparent 26%),
+        linear-gradient(135deg, #fff8fb, #f8eef4, #f3edf8);
 }
 
-
-/* =========================
-   GLITTER
-========================= */
+/* GLITTER */
 
 .sparkle {
-
     position: fixed;
-
     pointer-events: none;
-
     z-index: 0;
-
     color: white;
 
     text-shadow:
-        0 0 6px #ff8cbb,
-        0 0 14px #c79adf;
+        0 0 6px #ff8cba,
+        0 0 14px #c797df;
 
-    animation:
-        sparkleMove 3s
-        infinite ease-in-out;
+    animation: sparkle 3s infinite ease-in-out;
 }
 
 .s1 {
@@ -127,111 +89,85 @@ body {
     animation-delay: 1.4s;
 }
 
-@keyframes sparkleMove {
-
-    0%,
-    100% {
-
+@keyframes sparkle {
+    0%, 100% {
         opacity: .2;
-
-        transform:
-            scale(.8)
-            rotate(0deg);
+        transform: scale(.8) rotate(0deg);
     }
 
     50% {
-
         opacity: 1;
-
-        transform:
-            scale(1.25)
-            rotate(15deg);
+        transform: scale(1.25) rotate(15deg);
     }
 }
 
-
-/* =========================
-   NAVIGATION
-========================= */
+/* NAVIGATION */
 
 nav {
-
     position: sticky;
-
     top: 12px;
-
     z-index: 100;
 
     width: 92%;
-
     max-width: 1000px;
-
     margin: 18px auto;
 
-    padding:
-        10px 18px;
+    padding: 10px 18px;
 
     display: flex;
-
-    justify-content:
-        space-between;
-
+    justify-content: space-between;
     align-items: center;
 
     border-radius: 50px;
 
-    background:
-        rgba(
-            35,
-            22,
-            32,
-            .93
-        );
+    background: rgba(35, 22, 32, .94);
 
-    border:
-        1px solid
-        rgba(
-            255,
-            255,
-            255,
-            .12
-        );
+    border: 1px solid rgba(255, 255, 255, .12);
 
     box-shadow:
-        0 12px 30px
-        rgba(
-            91,
-            35,
-            64,
-            .18
-        );
+        0 12px 30px rgba(91, 35, 64, .18);
 }
 
 .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
 
     color: #ffd5e6;
-
     font-weight: 900;
-
     letter-spacing: 2px;
 }
 
+.logo-circle {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    color: #59223e;
+
+    background:
+        linear-gradient(135deg, #ffd9e8, #d9b8ec);
+
+    box-shadow:
+        0 0 15px rgba(255, 182, 213, .35);
+
+    font-size: 12px;
+}
+
 .nav-links {
-
     display: flex;
-
     gap: 4px;
 }
 
 nav a {
-
     color: white;
-
     text-decoration: none;
 
-    padding:
-        7px 12px;
-
+    padding: 7px 12px;
     border-radius: 25px;
 
     font-size: 13px;
@@ -240,48 +176,33 @@ nav a {
 }
 
 nav a:hover {
-
-    background:
-        #d94c84;
+    background: #d94c84;
 }
 
-
-/* =========================
-   MAIN CONTAINER
-========================= */
+/* MAIN */
 
 .container {
-
     position: relative;
-
     z-index: 2;
 
     width: 92%;
-
     max-width: 1000px;
 
     margin: auto;
 }
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
-
     position: relative;
-
     overflow: hidden;
 
-    min-height: 420px;
+    min-height: 430px;
 
     padding: 50px;
 
     display: flex;
-
     align-items: center;
-
     gap: 42px;
 
     border-radius: 34px;
@@ -289,7 +210,6 @@ nav a:hover {
     color: white;
 
     background:
-
         linear-gradient(
             120deg,
             #21151f 0%,
@@ -299,79 +219,50 @@ nav a:hover {
         );
 
     box-shadow:
-        0 25px 60px
-        rgba(
-            92,
-            31,
-            62,
-            .30
-        );
+        0 25px 60px rgba(92, 31, 62, .30);
 }
 
 .hero::before {
-
     content: "";
 
     position: absolute;
 
     width: 430px;
-
     height: 430px;
 
     border-radius: 50%;
 
     right: -160px;
-
     top: -180px;
 
     background:
-
         radial-gradient(
             circle,
-            rgba(
-                255,
-                255,
-                255,
-                .28
-            ),
+            rgba(255,255,255,.28),
             transparent 65%
         );
 }
 
 .hero::after {
-
     content: "✦";
 
     position: absolute;
 
     right: 55px;
-
     bottom: 30px;
 
     font-size: 72px;
 
-    color:
-        rgba(
-            255,
-            255,
-            255,
-            .10
-        );
+    color: rgba(255,255,255,.10);
 }
 
-
-/* =========================
-   PROFILE IMAGE
-========================= */
+/* PROFILE */
 
 .profile-box {
-
     position: relative;
-
     z-index: 3;
 
     width: 210px;
-
     height: 210px;
 
     flex: 0 0 210px;
@@ -380,112 +271,63 @@ nav a:hover {
 
     overflow: hidden;
 
-    border:
-        6px solid
-        #ffd7e7;
+    border: 6px solid #ffd7e7;
 
-    background:
-        #ffd7e7;
+    background: #ffd7e7;
 
     box-shadow:
+        0 0 0 8px rgba(255,255,255,.10),
+        0 20px 35px rgba(0,0,0,.30);
 
-        0 0 0 8px
-        rgba(
-            255,
-            255,
-            255,
-            .10
-        ),
-
-        0 20px 35px
-        rgba(
-            0,
-            0,
-            0,
-            .30
-        );
-
-    animation:
-        floatProfile
-        4s ease-in-out
-        infinite;
+    animation: floatProfile 4s ease-in-out infinite;
 }
 
 .profile-img {
-
     display: block;
 
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
 
-    object-position:
-        center 25%;
+    /* ถ้าหน้าสูงหรือต่ำไป เปลี่ยน 25% ได้ */
+    object-position: center 25%;
 
     border: none;
-
-    border-radius: 0;
 }
 
 @keyframes floatProfile {
-
-    0%,
-    100% {
-
-        transform:
-            translateY(0);
+    0%, 100% {
+        transform: translateY(0);
     }
 
     50% {
-
-        transform:
-            translateY(-7px);
+        transform: translateY(-7px);
     }
 }
 
-
-/* =========================
-   HERO CONTENT
-========================= */
+/* HERO CONTENT */
 
 .hero-content {
-
     position: relative;
-
     z-index: 3;
-
     flex: 1;
 }
 
-.logo {
+.cv-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 
-    display: inline-block;
+    margin-bottom: 14px;
 
-    margin-bottom: 13px;
-
-    padding:
-        7px 16px;
+    padding: 7px 16px;
 
     border-radius: 30px;
 
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            .12
-        );
+    background: rgba(255,255,255,.12);
 
-    border:
-        1px solid
-        rgba(
-            255,
-            255,
-            255,
-            .30
-        );
+    border: 1px solid rgba(255,255,255,.30);
 
     color: #ffd3e5;
 
@@ -495,57 +337,50 @@ nav a:hover {
 }
 
 .hero h1 {
-
-    font-size: 48px;
-
-    line-height: 1.05;
-
+    font-size: 47px;
+    line-height: 1.08;
     letter-spacing: 1px;
 }
 
-.job {
+.thai-name {
+    margin-top: 8px;
 
-    margin-top: 14px;
+    color: #f9deea;
+
+    font-size: 17px;
+}
+
+.job {
+    margin-top: 15px;
 
     font-size: 23px;
-
     font-weight: 900;
 
     letter-spacing: 4px;
 
-    color:
-        #ffc2da;
+    color: #ffc2da;
 }
 
 .subtitle {
-
     margin-top: 4px;
 
-    color:
-        #f7d9e5;
+    color: #f7d9e5;
 
     letter-spacing: 2px;
 }
 
 .intro {
-
     margin-top: 17px;
 
-    max-width: 520px;
+    max-width: 540px;
 
-    color:
-        #f9eaf1;
+    color: #f9eaf1;
 }
 
-
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTON */
 
 .buttons {
-
     display: flex;
-
     flex-wrap: wrap;
 
     gap: 10px;
@@ -554,11 +389,9 @@ nav a:hover {
 }
 
 .btn {
-
     display: inline-block;
 
-    padding:
-        10px 20px;
+    padding: 10px 20px;
 
     border-radius: 30px;
 
@@ -574,58 +407,28 @@ nav a:hover {
 }
 
 .btn-pink {
-
-    background:
-        #ffd1e3;
-
-    color:
-        #732648;
+    background: #ffd1e3;
+    color: #732648;
 }
 
 .btn-glass {
+    background: rgba(255,255,255,.08);
 
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            .08
-        );
-
-    border:
-        1px solid
-        rgba(
-            255,
-            255,
-            255,
-            .35
-        );
+    border: 1px solid rgba(255,255,255,.35);
 
     color: white;
 }
 
 .btn:hover {
-
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 
     box-shadow:
-        0 8px 18px
-        rgba(
-            0,
-            0,
-            0,
-            .15
-        );
+        0 8px 18px rgba(0,0,0,.15);
 }
 
-
-/* =========================
-   CARDS
-========================= */
+/* CARDS */
 
 .card {
-
     position: relative;
 
     margin-top: 27px;
@@ -634,64 +437,37 @@ nav a:hover {
 
     border-radius: 26px;
 
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            .90
-        );
+    background: rgba(255,255,255,.91);
 
-    border:
-        1px solid
-        #efd0dc;
+    border: 1px solid #efd0dc;
 
     box-shadow:
-        0 12px 32px
-        rgba(
-            105,
-            50,
-            74,
-            .08
-        );
+        0 12px 32px rgba(105,50,74,.08);
 
     transition: .25s;
 }
 
 .card:hover {
-
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 
     box-shadow:
-        0 18px 40px
-        rgba(
-            105,
-            50,
-            74,
-            .13
-        );
+        0 18px 40px rgba(105,50,74,.13);
 }
 
 .card::before {
-
     content: "";
 
     position: absolute;
 
     top: 0;
-
     left: 38px;
 
     width: 70px;
-
     height: 4px;
 
-    border-radius:
-        0 0 8px 8px;
+    border-radius: 0 0 8px 8px;
 
     background:
-
         linear-gradient(
             90deg,
             #d64d84,
@@ -700,74 +476,56 @@ nav a:hover {
 }
 
 .card h2 {
-
     margin-bottom: 20px;
 
     padding-bottom: 11px;
 
-    border-bottom:
-        1px solid
-        #efd8e1;
+    border-bottom: 1px solid #efd8e1;
 
-    color:
-        #91345d;
+    color: #91345d;
 
     letter-spacing: 1px;
 }
 
-
-/* =========================
-   PERSONAL INFO
-========================= */
+/* PERSONAL INFO */
 
 .info-grid {
-
     display: grid;
 
-    grid-template-columns:
-        1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
     gap: 15px;
 }
 
 .info-item {
-
     padding: 17px;
 
     border-radius: 17px;
 
     background:
-
         linear-gradient(
             135deg,
             #fff9fc,
             #fcecf3
         );
 
-    border:
-        1px solid
-        #efccda;
+    border: 1px solid #efccda;
 
     transition: .25s;
 }
 
 .info-item:hover {
+    transform: translateY(-3px);
 
-    transform:
-        translateY(-3px);
-
-    border-color:
-        #df7da4;
+    border-color: #df7da4;
 }
 
 .label {
-
     display: block;
 
     margin-bottom: 4px;
 
-    color:
-        #a95478;
+    color: #a95478;
 
     font-size: 11px;
 
@@ -776,13 +534,9 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
-
-/* =========================
-   SKILLS
-========================= */
+/* SKILLS */
 
 .skills {
-
     display: flex;
 
     flex-wrap: wrap;
@@ -791,23 +545,17 @@ nav a:hover {
 }
 
 .skill {
-
-    padding:
-        9px 17px;
+    padding: 9px 17px;
 
     border-radius: 30px;
 
-    color:
-        #672541;
+    color: #672541;
 
     font-weight: bold;
 
-    border:
-        1px solid
-        #e9b6ca;
+    border: 1px solid #e9b6ca;
 
     background:
-
         linear-gradient(
             135deg,
             #ffe0eb,
@@ -818,7 +566,6 @@ nav a:hover {
 }
 
 .skill:hover {
-
     color: white;
 
     transform:
@@ -826,7 +573,6 @@ nav a:hover {
         rotate(-1deg);
 
     background:
-
         linear-gradient(
             135deg,
             #76304e,
@@ -834,145 +580,66 @@ nav a:hover {
         );
 }
 
-
-/* =========================
-   SKILL BARS
-========================= */
-
-.skill-row {
-
-    margin-top: 19px;
-}
-
-.skill-title {
-
-    display: flex;
-
-    justify-content:
-        space-between;
-
-    margin-bottom: 7px;
-
-    font-weight: bold;
-}
-
-.bar {
-
-    height: 10px;
-
-    overflow: hidden;
-
-    border-radius: 30px;
-
-    background:
-        #efe4e9;
-}
-
-.bar-fill {
-
-    height: 100%;
-
-    border-radius: 30px;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            #873255,
-            #ee659b,
-            #9f75b6
-        );
-
-    animation:
-        loadBar
-        1.5s ease;
-}
-
-@keyframes loadBar {
-
-    from {
-        width: 0;
-    }
-}
-
-
-/* =========================
-   EDUCATION
-========================= */
+/* EDUCATION */
 
 .timeline {
-
     margin-left: 10px;
 
     padding-left: 28px;
 
-    border-left:
-        3px solid
-        #dc7fa5;
+    border-left: 3px solid #dc7fa5;
 }
 
 .timeline-item {
-
     position: relative;
 
     margin-bottom: 28px;
 }
 
-.timeline-item::before {
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
 
+.timeline-item::before {
     content: "✦";
 
     position: absolute;
 
     left: -42px;
-
     top: 0;
 
     width: 22px;
-
     height: 22px;
 
     display: grid;
-
     place-items: center;
 
     border-radius: 50%;
 
-    color:
-        #bd3d72;
+    color: #bd3d72;
 
-    background:
-        white;
+    background: white;
 
     box-shadow:
-        0 0 0 5px
-        #f7d6e3;
+        0 0 0 5px #f7d6e3;
 }
 
 .year {
-
-    color:
-        #bc3e72;
+    color: #bc3e72;
 
     font-weight: bold;
 }
 
-
-/* =========================
-   TABLE
-========================= */
+/* TABLE */
 
 .table-wrap {
-
     overflow-x: auto;
 }
 
 table {
-
     width: 100%;
 
-    border-collapse:
-        separate;
+    border-collapse: separate;
 
     border-spacing: 0;
 
@@ -980,13 +647,10 @@ table {
 
     border-radius: 17px;
 
-    border:
-        1px solid
-        #ebcad7;
+    border: 1px solid #ebcad7;
 }
 
 th {
-
     padding: 14px;
 
     color: white;
@@ -994,7 +658,6 @@ th {
     text-align: left;
 
     background:
-
         linear-gradient(
             120deg,
             #37212c,
@@ -1004,52 +667,37 @@ th {
 }
 
 td {
-
     padding: 14px;
 
-    background:
-        #fffafb;
+    background: #fffafb;
 
-    border-bottom:
-        1px solid
-        #efd7e0;
+    border-bottom: 1px solid #efd7e0;
 }
 
 tr:nth-child(even) td {
-
-    background:
-        #fff1f6;
+    background: #fff1f6;
 }
 
-
-/* =========================
-   PROJECTS
-========================= */
+/* PROJECTS */
 
 .project-grid {
-
     display: grid;
 
-    grid-template-columns:
-        1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
     gap: 16px;
 }
 
 .project {
-
     position: relative;
 
-    padding: 22px;
+    padding: 23px;
 
     border-radius: 20px;
 
-    border:
-        1px solid
-        #efd0dc;
+    border: 1px solid #efd0dc;
 
     background:
-
         linear-gradient(
             145deg,
             #fffafd,
@@ -1060,49 +708,98 @@ tr:nth-child(even) td {
 }
 
 .project:hover {
-
-    transform:
-        translateY(-4px);
+    transform: translateY(-4px);
 
     box-shadow:
-        0 12px 25px
-        rgba(
-            105,
-            50,
-            74,
-            .10
-        );
+        0 12px 25px rgba(105,50,74,.10);
 }
 
 .project-number {
-
     position: absolute;
 
     top: 8px;
-
     right: 15px;
 
     font-size: 32px;
 
     font-weight: bold;
 
-    color:
-        #efbad0;
+    color: #efbad0;
 }
 
+.project h3 {
+    color: #6f294b;
 
-/* =========================
-   CONTACT
-========================= */
+    margin-bottom: 8px;
+
+    padding-right: 35px;
+}
+
+/* CERTIFICATE */
+
+.certificate {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8fc,
+            #f5e7f3
+        );
+
+    border: 1px solid #eac8da;
+}
+
+.cert-icon {
+    width: 55px;
+    height: 55px;
+
+    flex: 0 0 55px;
+
+    border-radius: 18px;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 25px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #85385b,
+            #e25c92
+        );
+
+    box-shadow:
+        0 7px 18px rgba(168,60,108,.20);
+}
+
+.cert-year {
+    color: #c34176;
+
+    font-weight: bold;
+
+    font-size: 13px;
+}
+
+/* CONTACT */
 
 .contact {
-
     text-align: center;
 
     color: white;
 
     background:
-
         linear-gradient(
             120deg,
             #261923,
@@ -1112,118 +809,79 @@ tr:nth-child(even) td {
 }
 
 .contact h2 {
-
     color: white;
 
     border-color:
-        rgba(
-            255,
-            255,
-            255,
-            .20
-        );
+        rgba(255,255,255,.20);
 }
 
 .contact p {
-
-    color:
-        #f5dfe8;
+    color: #f5dfe8;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
-
-    padding:
-        35px 0 50px;
+    padding: 35px 0 50px;
 
     text-align: center;
 
-    color:
-        #926d80;
+    color: #926d80;
 
     font-size: 13px;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 700px) {
 
     .nav-links {
-
         display: none;
     }
 
-
     .hero {
+        flex-direction: column;
 
-        flex-direction:
-            column;
-
-        padding:
-            38px 23px;
+        padding: 38px 23px;
 
         text-align: center;
     }
 
-
     .profile-box {
-
         width: 155px;
-
         height: 155px;
 
-        flex:
-            0 0 155px;
+        flex: 0 0 155px;
     }
 
-
     .profile-img {
-
         width: 100%;
-
         height: 100%;
     }
 
-
     .hero h1 {
-
-        font-size: 34px;
+        font-size: 33px;
     }
 
-
     .job {
-
         font-size: 18px;
     }
 
-
     .buttons {
-
-        justify-content:
-            center;
+        justify-content: center;
     }
-
 
     .info-grid,
-
     .project-grid {
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
-
     .card {
+        padding: 27px 21px;
+    }
 
-        padding:
-            27px 21px;
+    .certificate {
+        align-items: flex-start;
     }
 }
 
@@ -1234,58 +892,42 @@ footer {
 
 <body>
 
-
 <!-- GLITTER -->
 
 <span class="sparkle s1">✦</span>
-
 <span class="sparkle s2">✧</span>
-
 <span class="sparkle s3">✦</span>
-
 <span class="sparkle s4">✧</span>
-
 <span class="sparkle s5">✦</span>
 
 
-
-<!-- NAVIGATION -->
+<!-- NAV -->
 
 <nav>
 
 <div class="nav-logo">
 
-K ✦ QA
+    <div class="logo-circle">
+        KM
+    </div>
+
+    K ✦ QA
 
 </div>
 
 
 <div class="nav-links">
 
-<a href="#about">
-About
-</a>
-
-<a href="#skills">
-Skills
-</a>
-
-<a href="#education">
-Education
-</a>
-
-<a href="#projects">
-Projects
-</a>
-
-<a href="#contact">
-Contact
-</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#education">Education</a>
+<a href="#projects">Projects</a>
+<a href="#certificate">Certificate</a>
+<a href="#contact">Contact</a>
 
 </div>
 
 </nav>
-
 
 
 <main class="container">
@@ -1300,7 +942,7 @@ Contact
 
 <img
 src="profile.jpg"
-alt="Profile Photo"
+alt="Kodchaporn Mahaprom"
 class="profile-img"
 >
 
@@ -1310,7 +952,7 @@ class="profile-img"
 <div class="hero-content">
 
 
-<div class="logo">
+<div class="cv-badge">
 
 ✦ KODCHAPORN CV
 
@@ -1323,9 +965,16 @@ KODCHAPORN
 
 <br>
 
-[LAST NAME]
+MAHAPROM
 
 </h1>
+
+
+<div class="thai-name">
+
+กชพร มหาพรม
+
+</div>
 
 
 <div class="job">
@@ -1345,10 +994,9 @@ SOFTWARE QUALITY ASSURANCE
 <p class="intro">
 
 Mathematics with Computer Science student
-interested in software quality,
-logical problem solving
-and creating reliable
-digital experiences.
+interested in Software Quality Assurance,
+software testing, logical problem solving
+and creating reliable digital experiences.
 
 </p>
 
@@ -1383,8 +1031,7 @@ Print CV ✦
 </section>
 
 
-
-<!-- PERSONAL INFORMATION -->
+<!-- PERSONAL INFO -->
 
 <section
 class="card"
@@ -1404,12 +1051,21 @@ id="about">
 <div class="info-item">
 
 <span class="label">
+FULL NAME
+</span>
 
+Kodchaporn Mahaprom
+
+</div>
+
+
+<div class="info-item">
+
+<span class="label">
 EMAIL
-
 </span>
 
-yourname@email.com
+S6704022611301@email.kmutnb.ac.th
 
 </div>
 
@@ -1417,12 +1073,10 @@ yourname@email.com
 <div class="info-item">
 
 <span class="label">
-
 PHONE
-
 </span>
 
-+66 XX XXX XXXX
+096-779-2565
 
 </div>
 
@@ -1430,26 +1084,26 @@ PHONE
 <div class="info-item">
 
 <span class="label">
-
-LOCATION
-
-</span>
-
-Bangkok, Thailand
-
-</div>
-
-
-<div class="info-item">
-
-<span class="label">
-
 CAREER INTEREST
-
 </span>
 
-QA Tester /
-Software Quality Assurance
+QA Tester / Software Quality Assurance
+
+</div>
+
+
+<div
+class="info-item"
+style="grid-column:1 / -1;">
+
+<span class="label">
+ADDRESS
+</span>
+
+Kamnan Yen Uthit 3 Alley,
+Lam Pla Thio,
+Lat Krabang,
+Bangkok, Thailand
 
 </div>
 
@@ -1458,7 +1112,6 @@ Software Quality Assurance
 
 
 </section>
-
 
 
 <!-- ABOUT ME -->
@@ -1476,193 +1129,22 @@ Software Quality Assurance
 <p>
 
 I am an undergraduate student
-majoring in Mathematics
-with Computer Science.
+majoring in Mathematics with Computer Science
+at King Mongkut's University of Technology
+North Bangkok.
 
-I am interested in
-Software Quality Assurance
+I am interested in Software Quality Assurance
 and Software Testing.
 
-My strengths include
-logical thinking,
-analytical problem solving,
-attention to detail
-and willingness to learn
-new technologies.
+I enjoy logical thinking,
+problem solving and learning new technologies,
+and I am interested in developing my skills
+for a future career as a QA Tester.
 
 </p>
 
 
 </section>
-
-
-
-<!-- KEY COMPETENCIES -->
-
-<section
-class="card"
-id="skills">
-
-
-<h2>
-
-☆ KEY COMPETENCIES
-
-</h2>
-
-
-<div class="skills">
-
-
-<span class="skill">
-
-Responsibility
-
-</span>
-
-
-<span class="skill">
-
-Fast Learner
-
-</span>
-
-
-<span class="skill">
-
-Analytical Thinking
-
-</span>
-
-
-<span class="skill">
-
-Attention to Detail
-
-</span>
-
-
-<span class="skill">
-
-Problem Solving
-
-</span>
-
-
-<span class="skill">
-
-Teamwork
-
-</span>
-
-
-</div>
-
-
-
-<div class="skill-row">
-
-
-<div class="skill-title">
-
-<span>
-
-Analytical Thinking
-
-</span>
-
-<span>
-
-90%
-
-</span>
-
-</div>
-
-
-<div class="bar">
-
-<div
-class="bar-fill"
-style="width:90%">
-</div>
-
-</div>
-
-
-</div>
-
-
-
-<div class="skill-row">
-
-
-<div class="skill-title">
-
-<span>
-
-Attention to Detail
-
-</span>
-
-<span>
-
-90%
-
-</span>
-
-</div>
-
-
-<div class="bar">
-
-<div
-class="bar-fill"
-style="width:90%">
-</div>
-
-</div>
-
-
-</div>
-
-
-
-<div class="skill-row">
-
-
-<div class="skill-title">
-
-<span>
-
-Teamwork
-
-</span>
-
-<span>
-
-85%
-
-</span>
-
-</div>
-
-
-<div class="bar">
-
-<div
-class="bar-fill"
-style="width:85%">
-</div>
-
-</div>
-
-
-</div>
-
-
-</section>
-
 
 
 <!-- EDUCATION -->
@@ -1703,8 +1185,13 @@ of Technology North Bangkok
 <p>
 
 Bachelor of Science
-in Mathematics
-with Computer Science
+
+</p>
+
+
+<p>
+
+Mathematics with Computer Science
 
 </p>
 
@@ -1719,7 +1206,6 @@ Faculty of Applied Science
 </div>
 
 
-
 <div class="timeline-item">
 
 
@@ -1732,16 +1218,9 @@ HIGH SCHOOL
 
 <h3>
 
-[YOUR SCHOOL]
+Debsirin Romklao School
 
 </h3>
-
-
-<p>
-
-Science - Mathematics Program
-
-</p>
 
 
 </div>
@@ -1753,15 +1232,68 @@ Science - Mathematics Program
 </section>
 
 
+<!-- SKILLS -->
 
-<!-- TECHNICAL SKILLS -->
+<section
+class="card"
+id="skills">
+
+
+<h2>
+
+☆ TECHNICAL SKILLS
+
+</h2>
+
+
+<div class="skills">
+
+<span class="skill">
+Python
+</span>
+
+<span class="skill">
+C
+</span>
+
+<span class="skill">
+C#
+</span>
+
+<span class="skill">
+C++
+</span>
+
+<span class="skill">
+SQL
+</span>
+
+<span class="skill">
+Microsoft Office
+</span>
+
+<span class="skill">
+GitHub
+</span>
+
+<span class="skill">
+HTML / CSS
+</span>
+
+</div>
+
+
+</section>
+
+
+<!-- QA SKILLS TABLE -->
 
 <section class="card">
 
 
 <h2>
 
-⌘ TECHNICAL SKILLS
+⌘ QA & SOFTWARE SKILLS
 
 </h2>
 
@@ -1775,15 +1307,11 @@ Science - Mathematics Program
 <tr>
 
 <th>
-
 Category
-
 </th>
 
 <th>
-
-Skills / Tools
-
+Knowledge / Skills
 </th>
 
 </tr>
@@ -1792,17 +1320,13 @@ Skills / Tools
 <tr>
 
 <td>
-
 Software Testing
-
 </td>
 
 <td>
-
 Manual Testing,
 Functional Testing,
 Test Case Design
-
 </td>
 
 </tr>
@@ -1811,17 +1335,13 @@ Test Case Design
 <tr>
 
 <td>
-
-QA
-
+Quality Assurance
 </td>
 
 <td>
-
 Test Scenario,
 Bug Reporting,
 Regression Testing
-
 </td>
 
 </tr>
@@ -1830,15 +1350,24 @@ Regression Testing
 <tr>
 
 <td>
+Programming
+</td>
 
+<td>
+Python, C, C#, C++
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
 Database
-
 </td>
 
 <td>
-
-SQL Fundamentals
-
+SQL
 </td>
 
 </tr>
@@ -1847,15 +1376,11 @@ SQL Fundamentals
 <tr>
 
 <td>
-
-Web
-
+Productivity Tools
 </td>
 
 <td>
-
-HTML / CSS
-
+Microsoft Office
 </td>
 
 </tr>
@@ -1864,17 +1389,11 @@ HTML / CSS
 <tr>
 
 <td>
-
-Tools
-
+Development Tools
 </td>
 
 <td>
-
-GitHub,
-Postman,
-Jira
-
+GitHub
 </td>
 
 </tr>
@@ -1889,7 +1408,6 @@ Jira
 </section>
 
 
-
 <!-- PROJECTS -->
 
 <section
@@ -1899,7 +1417,7 @@ id="projects">
 
 <h2>
 
-♡ PROJECTS
+♡ ACADEMIC PROJECTS
 
 </h2>
 
@@ -1919,24 +1437,23 @@ id="projects">
 
 <h3>
 
-CV Website
+Korean BBQ Restaurant
+Management System
 
 </h3>
 
 
 <p>
 
-Designed and developed
-a personal CV website
-using HTML and CSS
-and deployed it
-with GitHub Pages.
+Academic project involving
+the design and development
+of a management system
+for a Korean BBQ restaurant.
 
 </p>
 
 
 </div>
-
 
 
 <div class="project">
@@ -1951,17 +1468,48 @@ with GitHub Pages.
 
 <h3>
 
-Software Testing Practice
+Cat Food Store
+Website Management System
 
 </h3>
 
 
 <p>
 
-Practiced requirement analysis,
-test scenario design,
-test case creation
-and bug reporting.
+Academic project involving
+the design and development
+of a website management system
+for an online cat food store.
+
+</p>
+
+
+</div>
+
+
+<div class="project">
+
+
+<span class="project-number">
+
+03
+
+</span>
+
+
+<h3>
+
+Personal CV Website
+
+</h3>
+
+
+<p>
+
+Designed and developed
+a personal CV website
+and deployed it online
+using GitHub Pages.
 
 </p>
 
@@ -1974,6 +1522,62 @@ and bug reporting.
 
 </section>
 
+
+<!-- CERTIFICATE -->
+
+<section
+class="card"
+id="certificate">
+
+
+<h2>
+
+✦ CERTIFICATE
+
+</h2>
+
+
+<div class="certificate">
+
+
+<div class="cert-icon">
+
+✦
+
+</div>
+
+
+<div>
+
+
+<div class="cert-year">
+
+2026
+
+</div>
+
+
+<h3>
+
+Certificate in UX/UI Design Essentials
+
+</h3>
+
+
+<p>
+
+UX/UI Design Essentials Certificate
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
 
 
 <!-- CONTACT -->
@@ -1993,7 +1597,7 @@ LET'S CONNECT ✦
 <p>
 
 Interested in QA Testing,
-Software Quality
+Software Quality Assurance
 and Technology.
 
 </p>
@@ -2001,14 +1605,23 @@ and Technology.
 
 <div
 class="buttons"
-style="justify-content:center">
+style="justify-content:center;">
 
 
 <a
-href="mailto:yourname@email.com"
+href="mailto:S6704022611301@email.kmutnb.ac.th"
 class="btn btn-pink">
 
 Email Me ♡
+
+</a>
+
+
+<a
+href="tel:0967792565"
+class="btn btn-glass">
+
+Call Me
 
 </a>
 
@@ -2029,10 +1642,9 @@ GitHub ✦
 </section>
 
 
-
 <footer>
 
-✦ © 2026 Kodchaporn
+✦ © 2026 Kodchaporn Mahaprom
 • QA Tester CV ✦
 
 </footer>
