@@ -4,692 +4,719 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>My CV | QA Tester</title>
+<title>Kodchaporn | QA Tester CV</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    color: #2a2028;
-    line-height: 1.65;
+:root{
+    --black:#211720;
+    --darkpink:#64233f;
+    --wine:#8c3159;
+    --pink:#e35491;
+    --pink2:#f89fc3;
+    --lightpink:#ffe2ee;
+    --cream:#fff9fc;
+    --purple:#8d65a6;
+    --text:#342a32;
+}
+
+body{
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%,#ffd6e8 0,transparent 25%),
+        radial-gradient(circle at 90% 30%,#e4d5f2 0,transparent 27%),
+        linear-gradient(135deg,#fff8fb,#f8edf4,#f4eef9);
+
+    color:var(--text);
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+
+/* =========================
+   GLITTER BACKGROUND
+========================= */
+
+.glitter{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.star{
+    position:absolute;
+    color:#fff;
+    opacity:.75;
+    animation:twinkle 3s infinite ease-in-out;
+    text-shadow:
+        0 0 6px #ff9ac5,
+        0 0 12px #d99cff;
+}
+
+.star:nth-child(1){left:8%;top:12%;font-size:18px;}
+.star:nth-child(2){left:88%;top:17%;font-size:12px;animation-delay:.8s;}
+.star:nth-child(3){left:18%;top:50%;font-size:13px;animation-delay:1.5s;}
+.star:nth-child(4){left:92%;top:60%;font-size:19px;animation-delay:.4s;}
+.star:nth-child(5){left:5%;top:82%;font-size:14px;animation-delay:2s;}
+.star:nth-child(6){left:75%;top:90%;font-size:12px;animation-delay:1s;}
+
+@keyframes twinkle{
+    0%,100%{
+        opacity:.15;
+        transform:scale(.7) rotate(0deg);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.25) rotate(15deg);
+    }
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav{
+    position:sticky;
+    top:15px;
+    z-index:50;
+
+    width:92%;
+    max-width:1000px;
+
+    margin:18px auto;
+
+    background:rgba(35,22,32,.88);
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.17);
+
+    border-radius:50px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:9px 14px 9px 18px;
+
+    box-shadow:0 12px 30px rgba(77,28,53,.18);
+}
+
+.nav-logo{
+    font-weight:900;
+    color:#ffd5e7;
+    letter-spacing:2px;
+}
+
+.nav-links{
+    display:flex;
+    gap:5px;
+}
+
+.nav a{
+    color:#fff;
+    text-decoration:none;
+
+    font-size:13px;
+
+    padding:8px 13px;
+
+    border-radius:30px;
+
+    transition:.25s;
+}
+
+.nav a:hover{
+    background:#e0528c;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.container{
+    width:92%;
+    max-width:1000px;
+    margin:auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+
+    min-height:430px;
+
+    border-radius:35px;
+
+    display:flex;
+    align-items:center;
+
+    padding:55px;
+
+    color:#fff;
 
     background:
-        radial-gradient(circle at 10% 10%, rgba(246,184,207,.45), transparent 28%),
-        radial-gradient(circle at 90% 20%, rgba(142,72,126,.20), transparent 25%),
-        linear-gradient(135deg, #fff8fb, #f8edf3 55%, #f2e8f1);
-}
-
-.container {
-    width: 92%;
-    max-width: 950px;
-    margin: 35px auto;
-}
-
-/* ===== HEADER ===== */
-
-.header {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    gap: 32px;
-
-    padding: 48px;
-    border-radius: 30px;
-
-    color: white;
-
-    background:
-        linear-gradient(125deg,
-        #1f1720 0%,
-        #4a1d35 38%,
-        #842a55 72%,
-        #d34d83 100%);
+        linear-gradient(
+            120deg,
+            #21171f 0%,
+            #4d2037 32%,
+            #8f315a 68%,
+            #df548d 100%
+        );
 
     box-shadow:
-        0 20px 50px rgba(78, 29, 55, .30);
+        0 25px 60px rgba(89,29,59,.30);
 }
 
-/* วงกลมตกแต่ง */
-.header::before {
-    content: "";
-    position: absolute;
-    width: 290px;
-    height: 290px;
-    border-radius: 50%;
 
-    right: -90px;
-    top: -110px;
+/* dotted decoration */
+
+.hero-grid{
+    position:absolute;
+    inset:0;
+
+    opacity:.15;
+
+    background-image:
+        radial-gradient(#fff 1px,transparent 1px);
+
+    background-size:20px 20px;
+}
+
+
+/* glow */
+
+.hero-glow{
+    position:absolute;
+
+    width:400px;
+    height:400px;
+
+    border-radius:50%;
+
+    right:-120px;
+    top:-160px;
 
     background:
         radial-gradient(circle,
-        rgba(255,255,255,.20),
-        rgba(255,255,255,.02) 65%);
+        rgba(255,218,234,.45),
+        transparent 65%);
 }
 
-.header::after {
-    content: "✦";
-    position: absolute;
-    right: 45px;
-    bottom: 22px;
 
-    font-size: 58px;
-    color: rgba(255,255,255,.10);
+/* decorative hearts/stars */
+
+.decor{
+    position:absolute;
+
+    color:rgba(255,255,255,.24);
+
+    font-size:45px;
 }
 
-.profile-img {
-    width: 175px;
-    height: 175px;
+.decor.one{
+    right:70px;
+    bottom:50px;
+}
 
-    border-radius: 50%;
-    object-fit: cover;
+.decor.two{
+    right:190px;
+    top:55px;
 
-    border: 6px solid #ffd9e7;
+    font-size:25px;
+}
+
+
+/* PROFILE */
+
+.profile-wrap{
+    position:relative;
+    z-index:3;
+    flex-shrink:0;
+}
+
+.profile-img{
+    width:210px;
+    height:210px;
+
+    object-fit:cover;
+
+    border-radius:45% 55% 48% 52% / 52% 45% 55% 48%;
+
+    border:6px solid #ffd8e8;
 
     box-shadow:
-        0 0 0 5px rgba(255,255,255,.12),
-        0 12px 30px rgba(0,0,0,.30);
+        0 0 0 8px rgba(255,255,255,.10),
+        0 20px 40px rgba(0,0,0,.30);
 
-    z-index: 2;
+    animation:morph 7s ease-in-out infinite;
 }
 
-.header-text {
-    flex: 1;
-    z-index: 2;
+@keyframes morph{
+    0%,100%{
+        border-radius:45% 55% 48% 52% / 52% 45% 55% 48%;
+    }
+
+    50%{
+        border-radius:55% 45% 54% 46% / 44% 55% 45% 56%;
+    }
 }
 
-.logo {
-    display: inline-block;
 
-    padding: 7px 17px;
-    margin-bottom: 13px;
+/* HERO TEXT */
 
-    border-radius: 50px;
+.hero-info{
+    position:relative;
+    z-index:3;
 
-    background: rgba(255,255,255,.15);
-    border: 1px solid rgba(255,255,255,.35);
-
-    backdrop-filter: blur(8px);
-
-    color: #ffd7e7;
-
-    font-weight: 800;
-    letter-spacing: 2px;
+    margin-left:45px;
 }
 
-.header h1 {
-    font-size: 44px;
-    line-height: 1.08;
-    letter-spacing: 1px;
+.logo-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.30);
+
+    backdrop-filter:blur(10px);
+
+    padding:7px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    color:#ffd5e7;
+
+    margin-bottom:15px;
 }
 
-.position {
-    margin-top: 15px;
-
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: 3px;
-
-    color: #ffc5dc;
+.hero h1{
+    font-size:52px;
+    line-height:1.05;
+    letter-spacing:1px;
 }
 
-.sub-position {
-    color: #f5dbe5;
+.hero-job{
+    margin-top:17px;
 
-    font-size: 14px;
-    letter-spacing: 2px;
+    font-size:23px;
+    font-weight:800;
+
+    letter-spacing:4px;
+
+    color:#ffc1da;
 }
 
-/* ===== CARDS ===== */
+.hero-sub{
+    margin-top:3px;
 
-.card {
-    position: relative;
+    letter-spacing:2px;
 
-    margin-top: 26px;
-    padding: 36px;
+    color:#f7d9e6;
+}
 
-    border-radius: 24px;
+.hero-description{
+    margin-top:17px;
 
-    background: rgba(255,255,255,.88);
+    max-width:520px;
 
-    border:
-        1px solid rgba(224,161,188,.45);
+    color:#f8eaf0;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+
+    margin-top:23px;
+}
+
+.btn{
+    border:none;
+    cursor:pointer;
+
+    padding:11px 20px;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+    transition:.25s;
+
+    text-decoration:none;
+}
+
+.btn-primary{
+    background:#ffd0e2;
+    color:#742647;
+}
+
+.btn-secondary{
+    color:#fff;
+
+    background:rgba(255,255,255,.09);
+
+    border:1px solid rgba(255,255,255,.35);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.17);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.card{
+    position:relative;
+
+    margin-top:28px;
+
+    padding:38px;
+
+    background:rgba(255,255,255,.84);
+
+    border:1px solid rgba(224,157,187,.45);
+
+    backdrop-filter:blur(13px);
+
+    border-radius:27px;
 
     box-shadow:
-        0 10px 30px rgba(86,38,62,.08);
+        0 12px 35px rgba(102,48,72,.08);
 
-    backdrop-filter: blur(8px);
+    transition:.3s;
 }
 
-/* เส้นชมพูเล็ก ๆ ด้านบน */
-.card::before {
-    content: "";
-    position: absolute;
-
-    top: 0;
-    left: 35px;
-
-    width: 70px;
-    height: 4px;
-
-    border-radius: 0 0 10px 10px;
-
-    background:
-        linear-gradient(90deg,
-        #d94f86,
-        #8b3764);
-}
-
-.card h2 {
-    margin-bottom: 20px;
-    padding-bottom: 11px;
-
-    color: #8f315c;
-
-    border-bottom: 1px solid #efd5df;
-
-    letter-spacing: 1.5px;
-}
-
-/* ===== PERSONAL INFO ===== */
-
-.info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-}
-
-.info-box {
-    padding: 16px 18px;
-
-    border-radius: 16px;
-
-    background:
-        linear-gradient(135deg,
-        #fff8fb,
-        #fcebf2);
-
-    border: 1px solid #f0ccd9;
-
-    transition: .2s;
-}
-
-.info-box:hover {
-    transform: translateY(-3px);
-    box-shadow:
-        0 8px 20px rgba(167,61,107,.12);
-}
-
-.info-box strong {
-    display: block;
-    margin-bottom: 4px;
-
-    color: #a35476;
-
-    font-size: 12px;
-    letter-spacing: 1.2px;
-}
-
-/* ===== SKILLS ===== */
-
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 11px;
-}
-
-.skill {
-    padding: 10px 17px;
-
-    border-radius: 50px;
-
-    background:
-        linear-gradient(135deg,
-        #fbe2ec,
-        #f3bfd2);
-
-    color: #671f42;
-
-    border: 1px solid #e8a8c0;
-
-    font-weight: 700;
-
-    transition: .2s;
-}
-
-.skill:hover {
-    background:
-        linear-gradient(135deg,
-        #6f284b,
-        #d74d83);
-
-    color: white;
-
-    transform: translateY(-3px);
-}
-
-/* ===== TABLE ===== */
-
-table {
-    width: 100%;
-
-    margin-top: 15px;
-
-    border-collapse: separate;
-    border-spacing: 0;
-
-    overflow: hidden;
-
-    border-radius: 16px;
-
-    border: 1px solid #edcad8;
-}
-
-th {
-    background:
-        linear-gradient(120deg,
-        #40202f,
-        #7d3156,
-        #c74778);
-
-    color: white;
-}
-
-th,
-td {
-    padding: 14px;
-    text-align: left;
-
-    border-bottom:
-        1px solid #efd7e1;
-}
-
-td {
-    background: #fffafb;
-}
-
-tr:nth-child(even) td {
-    background: #fdf0f5;
-}
-
-tr:last-child td {
-    border-bottom: none;
-}
-
-/* ===== EDUCATION ===== */
-
-.timeline {
-    padding-left: 25px;
-
-    border-left:
-        3px solid #d64c82;
-}
-
-.timeline-item {
-    position: relative;
-
-    margin-bottom: 27px;
-}
-
-.timeline-item::before {
-    content: "";
-
-    position: absolute;
-
-    left: -33px;
-    top: 7px;
-
-    width: 13px;
-    height: 13px;
-
-    border-radius: 50%;
-
-    background: #b63d70;
+.card:hover{
+    transform:translateY(-3px);
 
     box-shadow:
-        0 0 0 5px #f7d4e1;
+        0 18px 40px rgba(102,48,72,.12);
 }
 
-.year {
-    margin-bottom: 5px;
+.card::before{
+    content:"";
 
-    color: #b33c6d;
+    position:absolute;
 
-    font-weight: 800;
+    top:0;
+    left:40px;
+
+    width:75px;
+    height:4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d94d85,
+            #9a5ea7
+        );
+
+    border-radius:0 0 10px 10px;
 }
 
-/* ===== TEXT ===== */
+.section-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
 
-.card p {
-    color: #554751;
+    color:#8d315b;
+
+    font-size:25px;
+
+    margin-bottom:22px;
+
+    padding-bottom:12px;
+
+    border-bottom:1px solid #eed6e0;
 }
 
-.card h3 {
-    color: #382b34;
+.section-icon{
+    width:36px;
+    height:36px;
+
+    border-radius:12px;
+
+    display:grid;
+    place-items:center;
+
+    background:
+        linear-gradient(135deg,#f9c7da,#e0c5ed);
 }
 
-/* ===== FOOTER ===== */
 
-.footer {
-    margin: 35px 0;
+/* =========================
+   PERSONAL INFO
+========================= */
 
-    text-align: center;
+.info-grid{
+    display:grid;
 
-    color: #8b6979;
+    grid-template-columns:
+        repeat(2,1fr);
 
-    font-size: 14px;
+    gap:15px;
 }
 
-/* ===== MOBILE ===== */
+.info-item{
+    padding:17px 19px;
 
-@media(max-width:650px) {
+    border-radius:17px;
 
-    .header {
-        flex-direction: column;
-        text-align: center;
-        padding: 38px 24px;
-    }
+    background:
+        linear-gradient(
+            135deg,
+            #fff9fc,
+            #fbeaf2
+        );
 
-    .header h1 {
-        font-size: 32px;
-    }
+    border:1px solid #f0ccd9;
 
-    .position {
-        font-size: 19px;
-    }
-
-    .profile-img {
-        width: 145px;
-        height: 145px;
-    }
-
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        padding: 28px 22px;
-    }
-
-    th,
-    td {
-        font-size: 14px;
-    }
+    transition:.25s;
 }
-</style>
-</head>
 
-<body>
+.info-item:hover{
+    transform:translateY(-3px);
 
-<div class="container">
+    border-color:#df80a6;
+}
 
-    <!-- HEADER -->
-    <section class="header">
+.info-label{
+    display:block;
 
-        <img src="profile.jpg"
-             alt="Profile Photo"
-             class="profile-img">
+    font-size:11px;
+    font-weight:800;
 
-        <div class="header-text">
+    color:#ae587c;
 
-            <div class="logo">QA</div>
+    letter-spacing:1.3px;
 
-            <h1>[YOUR NAME]</h1>
+    margin-bottom:3px;
+}
 
-            <p class="position">QA TESTER</p>
 
-            <p class="sub-position">
-                SOFTWARE QUALITY ASSURANCE
-            </p>
+/* =========================
+   SKILLS
+========================= */
 
-            <p style="margin-top:15px;">
-                CO-OP INTERNSHIP CANDIDATE
-            </p>
+.skill-cloud{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
 
-        </div>
-    </section>
+.skill-pill{
+    padding:9px 17px;
 
+    border-radius:30px;
 
-    <!-- PERSONAL INFORMATION -->
-    <section class="card">
+    background:
+        linear-gradient(
+            135deg,
+            #ffe1ec,
+            #e9d6f2
+        );
 
-        <h2>PERSONAL INFORMATION</h2>
+    border:1px solid #edbad0;
 
-        <div class="info-grid">
+    color:#642443;
 
-            <div class="info-box">
-                <strong>EMAIL</strong>
-                yourname@email.com
-            </div>
+    font-weight:700;
 
-            <div class="info-box">
-                <strong>PHONE</strong>
-                +66 XX XXX XXXX
-            </div>
+    transition:.25s;
+}
 
-            <div class="info-box">
-                <strong>LOCATION</strong>
-                Bangkok, Thailand
-            </div>
+.skill-pill:hover{
+    color:#fff;
 
-            <div class="info-box">
-                <strong>CAREER INTEREST</strong>
-                QA Tester / Software Testing
-            </div>
+    background:
+        linear-gradient(
+            135deg,
+            #71304f,
+            #dd5088
+        );
 
-        </div>
+    transform:
+        translateY(-3px)
+        rotate(-1deg);
+}
 
-    </section>
 
+/* =========================
+   SKILL METERS
+========================= */
 
-    <!-- CAREER OBJECTIVE -->
-    <section class="card">
+.skill-row{
+    margin:17px 0;
+}
 
-        <h2>CAREER OBJECTIVE</h2>
+.skill-top{
+    display:flex;
+    justify-content:space-between;
 
-        <p>
-            Seeking an opportunity as a QA Tester where I can apply
-            analytical thinking, logical problem-solving and computer
-            science knowledge to software testing and quality assurance.
-            I am interested in developing skills in test case design,
-            bug reporting, API testing and software quality improvement.
-        </p>
+    margin-bottom:7px;
 
-    </section>
+    font-weight:700;
+}
 
+.bar{
+    height:10px;
 
-    <!-- ABOUT ME -->
-    <section class="card">
+    background:#f1e4ea;
 
-        <h2>ABOUT ME</h2>
+    border-radius:50px;
 
-        <p>
-            I am an undergraduate student majoring in Mathematics with
-            Computer Science. I am interested in Software Quality Assurance
-            and Software Testing. I enjoy logical thinking, analyzing
-            problems and checking details. I am eager to learn new
-            technologies and develop my skills for a career as a QA Tester.
-        </p>
+    overflow:hidden;
+}
 
-    </section>
+.bar span{
+    display:block;
 
+    height:100%;
 
-    <!-- EDUCATION -->
-    <section class="card">
+    border-radius:50px;
 
-        <h2>EDUCATION</h2>
+    background:
+        linear-gradient(
+            90deg,
+            #8d315a,
+            #ef699e,
+            #a77bc1
+        );
 
-        <div class="timeline">
+    animation:grow 1.5s ease;
+}
 
-            <div class="timeline-item">
+@keyframes grow{
+    from{width:0;}
+}
 
-                <div class="year">2024 - PRESENT</div>
 
-                <h3>
-                    King Mongkut's University of Technology
-                    North Bangkok (KMUTNB)
-                </h3>
+/* =========================
+   EDUCATION TIMELINE
+========================= */
 
-                <p>
-                    Bachelor of Science (B.Sc.)
-                </p>
+.timeline{
+    position:relative;
 
-                <p>
-                    Mathematics with Computer Science
-                </p>
+    margin-left:9px;
 
-                <p>
-                    Faculty of Applied Science
-                </p>
+    padding-left:32px;
 
-            </div>
+    border-left:3px solid #e38caf;
+}
 
-            <div class="timeline-item">
+.timeline-item{
+    position:relative;
 
-                <div class="year">HIGH SCHOOL</div>
+    margin-bottom:30px;
+}
 
-                <h3>[YOUR HIGH SCHOOL]</h3>
+.timeline-item::before{
+    content:"✦";
 
-                <p>Science - Mathematics Program</p>
+    position:absolute;
 
-            </div>
+    left:-45px;
+    top:-2px;
 
-        </div>
+    width:24px;
+    height:24px;
 
-    </section>
+    display:grid;
+    place-items:center;
 
+    border-radius:50%;
 
-    <!-- KEY COMPETENCIES -->
-    <section class="card">
+    background:#fff;
 
-        <h2>KEY COMPETENCIES</h2>
+    color:#c74478;
 
-        <div class="skills">
+    box-shadow:
+        0 0 0 5px #f8d7e5;
+}
 
-            <span class="skill">Responsibility</span>
-            <span class="skill">Fast Learner</span>
-            <span class="skill">Analytical Thinking</span>
-            <span class="skill">Attention to Detail</span>
-            <span class="skill">Problem Solving</span>
-            <span class="skill">Teamwork</span>
+.year{
+    font-weight:900;
+    color:#c34478;
+}
 
-        </div>
 
-    </section>
+/* =========================
+   TABLE
+========================= */
 
+.table-wrap{
+    overflow-x:auto;
+}
 
-    <!-- TECHNICAL SKILLS TABLE -->
-    <section class="card">
+table{
+    width:100%;
 
-        <h2>TECHNICAL SKILLS</h2>
+    border-collapse:separate;
+    border-spacing:0;
 
-        <table>
+    border-radius:18px;
 
-            <tr>
-                <th>Category</th>
-                <th>Skills / Tools</th>
-            </tr>
+    overflow:hidden;
 
-            <tr>
-                <td>Software Testing</td>
-                <td>
-                    Manual Testing,
-                    Functional Testing,
-                    Test Case Design
-                </td>
-            </tr>
+    border:1px solid #eccbd8;
+}
 
-            <tr>
-                <td>Bug Management</td>
-                <td>
-                    Bug Reporting,
-                    Test Scenario
-                </td>
-            </tr>
+th{
+    padding:15px;
 
-            <tr>
-                <td>Database</td>
-                <td>SQL Fundamentals</td>
-            </tr>
+    color:#fff;
 
-            <tr>
-                <td>Web</td>
-                <td>HTML / CSS</td>
-            </tr>
+    text-align:left;
 
-            <tr>
-                <td>Programming</td>
-                <td>Programming Fundamentals</td>
-            </tr>
+    background:
+        linear-gradient(
+            120deg,
+            #38202d,
+            #823253,
+            #d34e83
+        );
+}
 
-            <tr>
-                <td>Tools to Learn</td>
-                <td>
-                    Postman, Jira, GitHub,
-                    Playwright
-                </td>
-            </tr>
+td{
+    padding:14px;
 
-        </table>
+    background:#fffafb;
 
-    </section>
-
-
-    <!-- PROJECTS -->
-    <section class="card">
-
-        <h2>ACADEMIC PROJECTS</h2>
-
-        <h3>CV Website Project</h3>
-
-        <p>
-            Developed a personal CV website using HTML and CSS
-            and deployed the website using GitHub Pages.
-        </p>
-
-        <br>
-
-        <h3>Software Testing Practice</h3>
-
-        <p>
-            Practiced analyzing software requirements,
-            creating test scenarios and designing test cases
-            for web applications.
-        </p>
-
-    </section>
-
-
-    <!-- CONTACT -->
-    <section class="card">
-
-        <h2>CONTACT</h2>
-
-        <p>
-            Email: yourname@email.com
-        </p>
-
-        <p>
-            GitHub:
-            github.com/Kodchaporn-49
-        </p>
-
-    </section>
-
-
-    <div class="footer">
-
-        © 2026 [YOUR NAME] |
-        QA Tester CV Website
-
-    </div>
-
-</div>
-
-</body>
-</html>
+    border-bott
